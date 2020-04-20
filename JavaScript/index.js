@@ -93,6 +93,7 @@ animate()
 window.addEventListener('resize', function () {
   choreographer.updateAnimations(calculateAnimations())
 })
+localStorage.removeItem("questions");
 
 // setting up the arrows
 console.log(window.innerWidth);
