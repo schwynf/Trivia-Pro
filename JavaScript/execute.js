@@ -72,6 +72,10 @@ $(document).ready(function () {
 
   }
 
+  // let eleMusic = $("<audio>");
+  // eleMusic.attr("src", "./Music/Unfolding_Revelation-David_Fesliyan.mp3");
+  let audioElement = document.createElement("audio");
+  audioElement.setAttribute("src", "./Music/Unfolding_Revelation-David_Fesliyan.mp3");
 
   //Event Listeners
   startButton.on("click", function (e) {
@@ -113,6 +117,8 @@ $(document).ready(function () {
 
 
   function reset() {
+    a = 1;
+    audioElement.pause();
     questionElement.text("Click the button below to start. You will have no more than 10 minutes to complete the whole trivia quiz.");
     quitButton.addClass("hide");
     startButton.removeClass("hide");
@@ -123,6 +129,7 @@ $(document).ready(function () {
   }
 
   function startGame() {
+    audioElement.play();
     console.log("game started");
     startButton.addClass("hide");
     quitButton.removeClass("hide");
@@ -142,6 +149,7 @@ $(document).ready(function () {
   //==================================================
   //Generate the questions and answers to be displayed
   //==================================================
+  let a = 1;
   function showQuestion(question) {
     answerElement.empty();
     nextBtn.removeClass("hide");
@@ -152,7 +160,8 @@ $(document).ready(function () {
       endGame();
     }
     else {
-      questionElement.html(question.q);
+      questionElement.html(a + ") " + question.q);
+      a++;
       answerElement.removeClass("hide");
       questionTimerFunction();
       for (let i = 0; i < question.o.length; i++) {
@@ -175,7 +184,6 @@ $(document).ready(function () {
         }
 
       }
-
     }
   }
 
