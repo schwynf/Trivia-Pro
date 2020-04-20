@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./CSS/execute.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <title>Execute Quiz</title>
+</head>
+
+<body class="blue-grey lighten-3">
+    <nav class="blue-grey lighten-5" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="./index.html" class="brand-logo">Trivia Pro</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./createquiz.html">Create Quiz</a></li>
+                <li><a href="./print.html">Print Quiz</a></li>
+            </ul>
+
+            <ul id="nav-mobile" class="sidenav">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./createquiz.html">Create Quiz</a></li>
+                <li><a href="./print.html">Print Quiz</a></li>
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+
+    <!-- Main Execute Quiz Card -->
+    <main>
+        <div class="parallax-container center-align">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m12">
+                        <div id="question-container" class="card blue-grey lighten-5 z-depth-5">
+                            <div class="card-content black-text darken-3">
+                                <div id="code-div">
+                                    <p>Type in a code below to pull up the trivia quiz that you've assigned to it.</p>
+                                    <input id="code" type="text" placeholder="code">
+                                    <a id="code-button" class="waves-effect waves-light btn center-align"
+                                        href="#">submit</a>
+                                    <p id="code-success" style="color: green;"></p>
+                                </div>
+
+                                <span class="card-title black-text darken-3">Are you ready?</span>
+                                <p class="black-text darken-3" id="question-element">Click the button below to start.
+                                    You
+                                    will have no more than 10 minutes to complete the whole
+                                    trivia quiz.
+                                </p>
+                                <br>
+                                <br>
+
+                                <form id="how-long" action="#">
+                                    <p>
+                                        How long for each question?
+                                        <br>
+                                        <p>
+                                            <label>
+                                                <input class="with-gap" name="how-long" type="radio" value="5"
+                                                    checked />
+                                                <span>5 seconds</span>
+                                            </label>
+                                        </p>
+                                        <p>
+                                            <label>
+                                                <input class="with-gap" name="how-long" type="radio" value="15"
+                                                    checked />
+                                                <span>15 seconds</span>
+                                            </label>
+                                        </p>
+                                        <p>
+                                            <label>
+                                                <input class="with-gap" name="how-long" type="radio" value="30" />
+                                                <span>30 seconds</span>
+                                            </label>
+                                        </p>
+                                        <p>
+                                            <label>
+                                                <input class="with-gap" name="how-long" type="radio" value="45" />
+                                                <span>45 seconds</span>
+                                            </label>
+                                        </p>
+                                        <p>
+                                            <label>
+                                                <input class="with-gap" name="how-long" type="radio" value="60" />
+                                                <span>60 seconds</span>
+                                            </label>
+                                        </p>
+                                </form>
+                                <div id="answer-buttons" class="btn-grid hide">
+
+                                </div>
+                            </div>
+                            <!-- Button Section -->
+                            <div id="button-div" class="card-action waves-light">
+                                <a id="start-button" class="waves-effect waves-light btn center-align" href="#">Click to
+                                    begin</a>
+                                <a id="next-button" class="waves-effect waves-light btn center-align hide" href="#">Next
+                                    Question</a>
+                                <a id="quit-button" class="waves-effect waves-light btn center-align hide"
+                                    href="./createquiz.html">Quit</a>
+                                <a id="reset-button" class="waves-effect waves-light btn center-align hide"
+                                    href="#">Reset</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="page-footer  grey lighten-1">
+        <div class="footer-copyright">
+            <div class="container">
+                <h5>Made by <a class="black-text text-lighten-3">&copy;Ministry of Magic</a></h5>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./JavaScript/execute.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+body {
+  background: #00807A;
+}
+
+#logo-container {
+  color: #444444
+}
+footer {
+  background-color: #ECEFF1;
+}
+nav ul a {
+  color: #444444;
+}
+nav a {
+  color: #26A69A;
+}
+nav {
+  margin-bottom: 30px;
+}
+
+/* #apiCategory {
+  padding: 5px;
+}
+
+#apiDifficulty {
+  padding: 5px;
+}
+#mQuestion {
+  margin: 15px;
+  padding: 5px;
+} */

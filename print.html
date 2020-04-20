@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./CSS/print.css">
+    <title>Print Quiz</title>
+</head>
+
+<body>
+    <nav class="blue-grey lighten-5" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="./index.html" class="brand-logo">Trivia Pro</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./createquiz.html">Create Quiz</a></li>
+                <li><a href="./execute.html">Execute Quiz</a></li>
+            </ul>
+
+            <ul id="nav-mobile" class="sidenav">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./createquiz.html">Create Quiz</a></li>
+                <li><a href="./execute.html">Execute Quiz</a></li>
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+<main>
+    <!-- Main Print Card with corresponding functionality -->
+    <div class="container fluid">
+        <div class="row" id="top">
+            <div class="col s12 m12">
+                <div id="question-container" class="card lighten-5 z-depth-5">
+                    <div class="card-content black-text darken-3">
+                        <div class="container">
+                            <div id="print-card" class="row">
+                                <div class="col s12 m12">
+                                    <h3 class="center-align">Print Trivia Quiz</h3>
+                                    <br>
+                                    <h4 class="center-align">Enter Trivia Quiz Code and Click Enter</h4>
+                                    <h5 class="center-align">Click the different print options to display quiz below.</h5>
+                                    <input id="code" placeholder="code" type="text">
+                                    <a id="cSubmit" class="waves-effect waves-light btn center-align">Enter</a><br>
+                                    <p id="error" class="text-danger"></p>
+                                    <h5 id="printOption">Print Options</h5>
+                                    <a id="qSubmit" class="waves-effect waves-light btn center-align">Questions</a><br>
+                                    <a id="aSubmit" class="waves-effect waves-light btn center-align">Answers</a><br>
+                                    <a id="oSubmit" class="waves-effect waves-light btn center-align">Questions w/o
+                                        Options</a><br>
+                                    <a id="lSubmit" class="waves-effect waves-light btn center-align">letters</a><br>
+                                    <hr>
+                                    <a id="print" class="right waves-effect waves-light btn center-align">Print</a><br>
+                                    
+                                    <!-- Title Section -->
+                                    <h5>Enter a Title</h5>
+                                    <input id="titleVal" placeholder="Title" type="text"><a id="titleButton"
+                                        class="waves-effect waves-light btn center-align">Title</a><br>
+                                </div>
+                            </div>
+                            <!-- Trivia Quiz Dispalyed Here -->
+                            <div class="row">
+                                <div class="col s12">
+                                    <h1 id="listTitle" class="center-align"></h1>
+                                    <ol>
+
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+
+    <footer class="page-footer  grey lighten-1">
+        <div class="footer-copyright">
+            <div class="container">
+                <h5>Made by <a class="black-text text-lighten-3">&copy;Ministry of Magic</a></h5>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./JavaScript/print.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</body>
+
+</html>

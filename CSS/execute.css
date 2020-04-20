@@ -1,0 +1,105 @@
+
+ nav ul a,
+ nav .brand-logo {
+   color: #444;
+ }
+ body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/* nav {
+  margin-bottom: 25px;
+} */
+
+main {
+  flex: 1 0 auto;
+  background-color: #00807A;
+  padding-top:50px;
+  padding-bottom:25px;
+}
+
+ li  {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+  }
+
+ p {
+   line-height: 2rem;
+ }
+ 
+ .sidenav-trigger {
+   color: #26a69a;
+ }
+ 
+ .parallax-container {
+   min-height: 380px;
+   line-height: 0;
+   height: auto;
+   color: rgba(255,255,255,.9);
+   background: #00807A;
+ }
+   .parallax-container .section {
+     width: 100%;
+   }
+ 
+ @media only screen and (max-width : 992px) {
+   .parallax-container .section {
+     position: absolute;
+     top: 40%;
+     
+   }
+   #index-banner .section {
+     top: 10%;
+   }
+ }
+ 
+ @media only screen and (max-width : 600px) {
+   #index-banner .section {
+     top: 0;
+   }
+ }
+ 
+ #timer {
+  color: black;
+ }
+ 
+ .hide {
+   display: none;
+ }
+
+ .spacer {
+   height: 100px;
+ }
+
+ .card-body {
+  box-shadow: 0 0 10px 2px;
+}
+
+.button-effects {
+  padding: 10px;
+  margin: 10px;
+  
+}
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  margin: 20px 0;
+}
+.button-effects:hover {
+  border: solid black 1px;
+}
+.btn.correct {
+  background-color:#218838;
+}
+.btn.wrong {
+  background-color: #C82333;
+}
+#code {
+  text-align: center;
+}
