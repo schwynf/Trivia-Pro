@@ -478,7 +478,7 @@ function populateQuiz(questions) {
   clearButton.text("Clear");
   clearButton.attr("id", "clearButton");
   $("#demo").append(clearButton);
-  $("#number").text("Generated Quiz Displayed Here. Question counter: ");
+  $("#number").text("Generated Quiz Displayed Here. Question Counter: ");
   let numberCount = $("#number").text();
   console.log(numberCount);
   numberCount += questions.length;

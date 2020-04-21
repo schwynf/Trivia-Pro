@@ -1,11 +1,12 @@
 $('.sidenav').sidenav();
 $('.parallax').parallax();
 
-let questions;
+// pulling questions from storage
+let questions = localStorage.getItem("questions");
+questions = JSON.parse(questions);
 $("#cSubmit").on("click", function () {
     let code = $("#code").val();
-    questions = code;
-    questions = localStorage.getItem(questions);
+    questions = localStorage.getItem(code);
     questions = JSON.parse(questions);
     if (questions !== null) {
         console.log(questions);
@@ -16,9 +17,9 @@ $("#cSubmit").on("click", function () {
         $("#printOption").text("Print Options: ");
         $("#error").show()
         $("#error").text("Code not found");
-        setTimeout(function(){
+        setTimeout(function () {
             $("#error").hide();
-            },1500);
+        }, 1500);
     }
 })
 
@@ -135,7 +136,7 @@ $("#titleButton").on("click", function () {
     $("#listTitle").text(text);
 })
 
-$("#print").on("click", function(){
+$("#print").on("click", function () {
     $("nav").hide();
     $("#print-card").hide();
     let print = setTimeout(function () {
@@ -146,4 +147,39 @@ $("#print").on("click", function(){
         $("nav").show();
     }, 1000);
 
-})
+});
+
+// key list display
+let lastPassword = localStorage.getItem("lastPassword");
+lastPassword = JSON.parse(lastPassword);
+console.log(lastPassword.length);
+if (lastPassword !== null) {
+    let newArray = [];
+    for (let i = 0; i < lastPassword.length; i++) {
+        newArray.push(lastPassword[i].pWord)
+    }
+    let x = newArray.join(", ")
+    $("#key-list").html("Code list: " + x);
+}
+
+
+$("#delete").on("click", function () {
+    let lastPassword = localStorage.getItem("lastPassword");
+    lastPassword = JSON.parse(lastPassword);
+    console.log("cool delete");
+    let code = $("#code").val();
+    for (let i = 0; i < lastPassword.length; i++) {
+        if (code === lastPassword[i].pWord) {
+            localStorage.removeItem(code);
+            lastPassword.splice(i, 1)
+            let json = JSON.stringify(lastPassword);
+            localStorage.setItem("lastPassword", json);
+        }
+    }
+    let newArray = [];
+    for (let i = 0; i < lastPassword.length; i++) {
+        newArray.push(lastPassword[i].pWord)
+    }
+    let x = newArray.join(", ")
+    $("#key-list").html("Code list: " + x);
+});
