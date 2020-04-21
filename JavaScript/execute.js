@@ -109,7 +109,7 @@ $(document).ready(function () {
     else {
       $("#code-success").show();
       $("#code-success").attr("style", "color: green;");
-      $("#code-success").text("Successfully added your code. That quiz has " + numberOfQuestions + " question(s).");
+      $("#code-success").text("Successfully added your code. That quiz has " + questions.length + " question(s).");
       $("#code-success").hide(10000);
       reset();
     }
