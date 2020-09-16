@@ -217,7 +217,7 @@ $(document).ready(function () {
     }).then(function (response) {
       console.log(response);
       console.log(response.data[0].url);
-      let img = $("<img>").attr("src", response.data[0].images.downsized_large.url);
+      let img = $("<img>").attr("src", response.data[0].images.downsized_large.url).css("width","100%");
       questionElement.append("<br>").append(img);
 
     })
